@@ -9,8 +9,8 @@ https://github.com/EM50L/Traduccion_es_Node-Red
 
 
 ## Instalacion 
-- Windows Descargar Zip [Github: ElectronArduinoNodeRed V1.0.2 .zip](https://github.com/EM50L/ElectronArduinoNodeRed/releases/download/V1.0.2/ElectronArduinoNodeRed-win32-ia32_v1.0.2.zip) 
+- Windows Descargar 7Z [Github: PortableNodeRed-win32-ia32.7z](https://github.com/EM50L/PortableNodeRed/releases/download/v1.0.0/PortableNodeRed-win32-ia32.7z) 
  (descomprimir y ejecutar.) <!---->
-- Linux Descargar 7z [Github: ElectronArduinoNodeRed V1.0.2 .7z](https://github.com/EM50L/ElectronArduinoNodeRed/releases/download/V1.0.2/ElectronArduinoNodeRed-linux-x64_v1.0.2.7z) 
+- Linux Descargar 7z [Github: PortableNodeRed-linux-x64.7z](https://github.com/EM50L/PortableNodeRed/releases/download/v1.0.0/PortableNodeRed-linux-x64.7z) 
  (descomprimir y ejecutar.) <!---->
 
