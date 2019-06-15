@@ -1,0 +1,35 @@
+{
+  "name": "PortableNodeRed",
+  "version": "1.1.1",
+  "description": "Electron Node-RED",
+  "main": "main.js",
+  "flows": "flows.json",
+  "scripts": {
+    "start": "electron .",
+    "install": "electron-rebuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:EM50L/electron-node-red_Jejo.git"
+  },
+  "keywords": [
+    "Electron",
+    "node-red",
+    "portable",
+    "demo"
+  ],
+  "author": "Jejo(Em50L)",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^2.0.18",
+    "electron-rebuild": "^1.8.4"
+  },
+  "dependencies": {
+    "data-table": "^2.0.0",
+    "express": "*",
+    "node-red": "^1.0.0-beta.2",
+    "node-red-contrib-advanced-ping": "^1.2.0",
+    "node-red-dashboard": "^2.14.0",
+    "node-red-node-openweathermap": "0.2.1"
+  }
+}
