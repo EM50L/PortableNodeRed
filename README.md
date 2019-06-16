@@ -37,3 +37,26 @@ npm install
 #Si no tampoco te preocupes solo perderas algunas caracteristicas como posibilidad de gestionar la paleta.
 
 ```
+
+
+## Empaquetado de la aplicacion / Packaging your application
+```
+# https://github.com/Urucas/electron-packager-interactive
+
+#Instalar epi / Install epi
+npm install -g electron-packager-interactive
+
+# ejecutar / Run it
+epi
+
+```
+
+## License [CC0 (Public Domain)](LICENSE.md)
+
+## Codigo de referencia / Reference Code (parts of code more explained)
+ - **Node-RED Embedding into an existing app** https://nodered.org/docs/embedding
+ - **Electron First App** https://electronjs.org/docs/tutorial/first-app 
+ - **Electron Menus** https://www.christianengvall.se/electron-menu/ 
+ 
+ 
+## [pagina personal del autor: jejo.es](https://jejo.es/categories/node-red/)
