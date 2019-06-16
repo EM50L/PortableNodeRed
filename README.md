@@ -15,11 +15,25 @@ https://github.com/EM50L/Traduccion_es_Node-Red
  (descomprimir y ejecutar.) <!---->
 
 ## Compilacion 
-
-´´´
+```bash
 # 1) Clonado del repositorio
 git clone https://github.com/EM50L/PortableNodeRed.git
 cd PortableNodeRed
 npm install --unsafe-perm node-red@next
 
-´´´
+# 2) Fuerzo version de electron rama 2 (viene con nodev8 mejor para poder usar las apis nativas)
+npm install electron@2.0.18
+
+# 3) instalo y resuelvo dependencias.
+npm install
+
+# NOTA IMPORTANTE PARA QUE FUNCIONE TODO BIEN
+# no deberia aparecer electron-rebuild
+# si aparece es porque la version de nodejs que tienes es distinta a la de electron.
+
+# Esta compilacion se ha pensado para electron 2.0.x y node 8.x
+# Si no consigues compilarla bajate un paquete precompilado por el autor en "releases"
+
+#Si no tampoco te preocupes solo perderas algunas caracteristicas como posibilidad de gestionar la paleta.
+
+```
