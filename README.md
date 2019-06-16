@@ -14,3 +14,12 @@ https://github.com/EM50L/Traduccion_es_Node-Red
 - Linux Descargar 7z [Github: PortableNodeRed-linux-x64.7z](https://github.com/EM50L/PortableNodeRed/releases/download/v1.0.0/PortableNodeRed-linux-x64.7z) 
  (descomprimir y ejecutar.) <!---->
 
+## Compilacion 
+
+´´´
+# 1) Clonado del repositorio
+git clone https://github.com/EM50L/PortableNodeRed.git
+cd PortableNodeRed
+npm install --unsafe-perm node-red@next
+
+´´´
