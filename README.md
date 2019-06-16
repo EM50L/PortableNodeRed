@@ -34,7 +34,7 @@ npm install
 # Esta compilacion se ha pensado para electron 2.0.x y node 8.x
 # Si no consigues compilarla bajate un paquete precompilado por el autor en "releases"
 
-#Si no tampoco te preocupes solo perderas algunas caracteristicas como posibilidad de gestionar la paleta.
+#Si no tampoco te preocupes solo perderas algunas caracteristicas como poder cambiar el app.asar a otro framework.
 
 ```
 
@@ -48,6 +48,8 @@ npm install -g electron-packager-interactive
 
 # ejecutar / Run it
 epi
+
+#ojo escoger la version de electron adecuada 2.0.18 (la misma con la que se ha compilado la aplicacion)
 
 ```
 
