@@ -9,9 +9,10 @@ https://github.com/EM50L/Traduccion_es_Node-Red
 
 
 ## Instalacion 
-- Windows Descargar 7Z [Github: PortableNodeRed-win32-ia32.7z](https://github.com/EM50L/PortableNodeRed/releases/download/v1.0.0/PortableNodeRed-win32-ia32.7z) 
+- Windows Descargar Github: [PortableNodeRed-win32-ia32.7z](https://github.com/EM50L/PortableNodeRed/releases/download/v1.0.0/PortableNodeRed-win32-ia32.7z) 
+o [PortableNodeRed-win32-ia32.zip](https://github.com/EM50L/PortableNodeRed/releases/download/v1.0.0/PortableNodeRed-win32-ia32.zip) 
  (descomprimir y ejecutar.) <!---->
-- Linux Descargar 7z [Github: PortableNodeRed-linux-x64.7z](https://github.com/EM50L/PortableNodeRed/releases/download/v1.0.0/PortableNodeRed-linux-x64.7z) 
+- Linux Descargar Github: [PortableNodeRed-linux-x64.7z](https://github.com/EM50L/PortableNodeRed/releases/download/v1.0.0/PortableNodeRed-linux-x64.7z) 
  (descomprimir y ejecutar.) <!---->
 
 ## nota: funcionabilidad.
