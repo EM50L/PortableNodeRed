@@ -15,11 +15,11 @@ https://github.com/EM50L/Traduccion_es_Node-Red
  (descomprimir y ejecutar.) <!---->
 
 ## nota: funcionabilidad.
-#### Para poder gestionar la paleta. (posibilidad de añadir nodos)
-necesitas instalar npm (nodejs)
-Windows instala node v8 desde aqui: https://nodejs.org/dist/latest-v8.x/
-Windows ej: https://nodejs.org/dist/latest-v8.x/node-v8.16.0-x86.msi (ultima version para 32bits en el momento en el que escribi el archivo.)
-Linux preferiblemente instala node desde el gestor de paquetes. (para que las dependencias y librerias del sistema queden bien resueltas)
+Para poder gestionar la paleta. (posibilidad de añadir nodos)  
+necesitas instalar npm (nodejs)  
+ Windows instala node v8 desde aqui: https://nodejs.org/dist/latest-v8.x/
+ ej: https://nodejs.org/dist/latest-v8.x/node-v8.16.0-x86.msi (ultima version para 32bits en el momento en el que escribi el archivo.)  
+ Linux preferiblemente instala node desde el gestor de paquetes. (para que las dependencias y librerias del sistema queden bien resueltas)
 
 
 ## Compilacion 
