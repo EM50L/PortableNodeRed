@@ -83,5 +83,10 @@ epi
  - **Electron First App** https://electronjs.org/docs/tutorial/first-app 
  - **Electron Menus** https://www.christianengvall.se/electron-menu/ 
  
- 
+## Tablas comparativas (para cuadrar versiones entre electron , node-red y serialport ) 
+https://electronjs.org/docs/development/upgrading-node 
+https://github.com/electron/node
+https://nodered.org/docs/faq/node-versions
+https://serialport.io/docs/guide-platform-support
+
 ## [pagina personal del autor: jejo.es](https://jejo.es/categories/node-red/)
