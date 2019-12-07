@@ -38,8 +38,11 @@ necesitas instalar npm (nodejs)
 
 # 1) Clonado del repositorio
 git clone https://github.com/EM50L/PortableNodeRed.git
+# Nota si no tienes git descarga y descomprime https://github.com/EM50L/PortableNodeRed/archive/master.zip
+
 cd PortableNodeRed
 npm install --unsafe-perm node-red
+
 
 
 # 2) Fuerzo version de electron rama 2 (viene con nodev8 mejor para poder usar las apis nativas)
