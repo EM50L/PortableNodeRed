@@ -16,7 +16,7 @@ https://github.com/EM50L/Traduccion_es_Node-Red
     * [PortableNodeRed-linux-x64.7z](https://github.com/EM50L/PortableNodeRed/releases/download/v1.0.0/PortableNodeRed-linux-x64.7z) 
     * descomprimir y ejecutar. <!---->
 
-## nota: funcionabilidad.
+### nota: funcionabilidad.
 Para poder gestionar la paleta. (posibilidad de añadir nodos)  
 necesitas instalar npm (nodejs)  
 - Windows instala node v8 desde aqui: 
@@ -64,8 +64,14 @@ npm install
 
 ```
 
+## prueba ejecucion
+```bash
+npm start
+```
+
 
 ## Empaquetado de la aplicacion / Packaging your application
+Hacer la aplicacion portable con electron. / making a portable app width Electron.
 ```
 # https://github.com/Urucas/electron-packager-interactive
 
