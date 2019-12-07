@@ -5,7 +5,7 @@ console.log("Estamos usando" )
 console.log("Node "+process.versions.node )
 console.log("Chrome "+process.versions.chrome)
 console.log("Electron "+process.versions.electron)
-console.log("Serialport "+require('serialport/package').version)
+//console.log("Serialport "+require('serialport/package').version)
 console.log("process.argv[1]="+process.argv[1] )
 
 // Algunas configuraciones para editarlas facilmente
@@ -59,6 +59,7 @@ var settings = {
     userDir: userdir, // ver linea 24 Problema con el directorio a utilizar...
     flowFile: 'flows.json',
     functionGlobalContext: { bcryptjs:require('bcryptjs'), fs:require('fs'), path:require('path'), os:require('os') ,electron:require('electron'),win}    // enables global context
+    //V10.4workarround editorTheme: { projects: {enabled: false} }, // sin esto no arranca al crear un usuario
 };
 
 
@@ -78,7 +79,9 @@ try{
 		//settings.functionGlobalContext=config.functionGlobalContext ; //https://nodered.org/docs/writing-functions.html#loading-additional-modules
 		// problem bcryptjs in windows version not load.
 		if (config.functionGlobalContext)settings.functionGlobalContext=config.functionGlobalContext ; //https://nodered.org/docs/writing-functions.html#loading-additional-modules
-	}else{
+		//if (config.adminAuth && !config.editorTheme)settings.functionGlobalContext=config.functionGlobalContext ; //https://nodered.org/docs/writing-functions.html#loading-additional-modules
+		if (config.editorTheme)settings.editorTheme=config.editorTheme;//sin esta linea no carga al definir un usuario en settings.js
+		}else{
 		console.log("\nArchivo configuracion NO encontrado:\n"+pconf+"\n\n")
 	}
 }catch(err){console.log(err)}
@@ -96,10 +99,11 @@ red_app.use(settings.httpNodeRoot,RED.httpNode);
 server.listen(listenPort);
 
 // Start the runtime
-//RED.start();//problema no carga la pagina añado evento then 
+//RED.start();//problema no carga la pagina aÃ±ado evento then 
 RED.start().then(function() {
      console.log("\n\nServidor accesible desde: http://127.0.0.1:"+listenPort+url+"\n\n");
      win.loadURL("http://127.0.0.1:"+listenPort+url);//"/ui/");
+     //Aqui habra que poner un timmer o en index.html
 }); 
 // Fin Codigo de https://nodered.org/docs/embedding
 
@@ -114,7 +118,7 @@ function acercade(item,fWin) {
 
 
 var template = [{
-	label: "Applicacion",submenu: [
+	label: "Aplicacion",submenu: [
 		{label:'Acerca de...',click(item,fWin){acercade(item,fWin)} },
 		{type:"separator"},{label:'Salir',role:'quit' }]
     },{
@@ -142,8 +146,8 @@ console.log("Estas ejecutando main.js 118 acabo de ejecutar:Menu.setApplicationM
 //_______________________________________________________________________________________________________
 // Codigo de https://electronjs.org/docs/tutorial/first-app   
 
-// Mantén una referencia global del objeto window, si no lo haces, la ventana 
-// se cerrará automáticamente cuando el objeto JavaScript sea eliminado por el recolector de basura.
+// MantÃ©n una referencia global del objeto window, si no lo haces, la ventana 
+// se cerrarÃ¡ automÃ¡ticamente cuando el objeto JavaScript sea eliminado por el recolector de basura.
 //let win; // subido de linea 145 a linea 33
 
 function createWindow() {
@@ -158,13 +162,13 @@ function createWindow() {
 		icon: __dirname + "/nodered.png"
 	});
 	
-	// y cargue el index.html de su aplicación.
+	// y cargue el index.html de su aplicaciÃ³n.
 	win.loadFile('index.html');
 
 	// Abre las herramientas de desarrollo (DevTools).
 	//win.webContents.openDevTools()
 	
-	// nuevas ventanas en cascada y mismo tamaño original
+	// nuevas ventanas en cascada y mismo tamaÃ±o original
 	win.webContents.on("new-window", function(e, url, frameName, disposition, options) {
 		var w = win.getBounds();
 		options.x = w.x+15;	options.y = w.y+15;
@@ -173,32 +177,32 @@ function createWindow() {
 
 	// Emitido cuando la ventana es cerrada.
 	win.on('closed', function () {
-		// Elimina la referencia al objeto window, normalmente  guardarías las ventanas
-		// en un vector si tu aplicación soporta múltiples ventanas, este es el momento
-		// en el que deberías borrar el elemento correspondiente.
+		// Elimina la referencia al objeto window, normalmente  guardarÃ­as las ventanas
+		// en un vector si tu aplicaciÃ³n soporta mÃºltiples ventanas, este es el momento
+		// en el que deberÃ­as borrar el elemento correspondiente.
 		win = null;
 	});
 }
 
-// Este método será llamado cuando Electron haya terminado
-// la inicialización y esté listo para crear ventanas del navegador.
-// Algunas APIs pueden usarse sólo después de que este evento ocurra.
+// Este mÃ©todo serÃ¡ llamado cuando Electron haya terminado
+// la inicializaciÃ³n y estÃ© listo para crear ventanas del navegador.
+// Algunas APIs pueden usarse sÃ³lo despuÃ©s de que este evento ocurra.
 app.on('ready', createWindow);
 
 // Sal cuando todas las ventanas hayan sido cerradas.
 app.on('window-all-closed', function () {
-  // En macOS es común para las aplicaciones y sus barras de menú
-  // que estén activas hasta que el usuario salga explicitamente con Cmd + Q
+  // En macOS es comÃºn para las aplicaciones y sus barras de menÃº
+  // que estÃ©n activas hasta que el usuario salga explicitamente con Cmd + Q
     //if (process.platform !== 'darwin') {
         app.quit();//creo que con esta linea cierro el proceso en segundo plano
     //}
 });
 
 app.on('activate', function() {
-  // En macOS es común volver a crear una ventana en la aplicación cuando el
+  // En macOS es comÃºn volver a crear una ventana en la aplicaciÃ³n cuando el
   // icono del dock es clicado y no hay otras ventanas abiertas.
   if (win === null) { createWindow(); win.loadURL("http://127.0.0.1:"+listenPort+url);}
 });
 
-// En este archivo puedes incluir el resto del código del proceso principal de
-// tu aplicación. También puedes ponerlos en archivos separados y requerirlos aquí.
+// En este archivo puedes incluir el resto del cÃ³digo del proceso principal de
+// tu aplicaciÃ³n. TambiÃ©n puedes ponerlos en archivos separados y requerirlos aquÃ­.
