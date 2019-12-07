@@ -9,29 +9,43 @@ https://github.com/EM50L/Traduccion_es_Node-Red
 
 
 ## Instalacion 
-- Windows Descargar Github: [PortableNodeRed-win32-ia32.7z](https://github.com/EM50L/PortableNodeRed/releases/download/v1.0.0/PortableNodeRed-win32-ia32.7z)    
-o [PortableNodeRed-win32-ia32.zip](https://github.com/EM50L/PortableNodeRed/releases/download/v1.0.0/PortableNodeRed-win32-ia32.zip)    
- (descomprimir y ejecutar.) <!---->
-- Linux Descargar Github: [PortableNodeRed-linux-x64.7z](https://github.com/EM50L/PortableNodeRed/releases/download/v1.0.0/PortableNodeRed-linux-x64.7z) 
- (descomprimir y ejecutar.) <!---->
+- Windows Descargar Github: 
+    * [PortableNodeRed-win32-ia32.7z](https://github.com/EM50L/PortableNodeRed/releases/download/v1.0.0/PortableNodeRed-win32-ia32.7z) o [PortableNodeRed-win32-ia32.zip](https://github.com/EM50L/PortableNodeRed/releases/download/v1.0.0/PortableNodeRed-win32-ia32.zip)
+    * Descomprimir y ejecutar. <!---->
+- Linux Descargar Github: 
+    * [PortableNodeRed-linux-x64.7z](https://github.com/EM50L/PortableNodeRed/releases/download/v1.0.0/PortableNodeRed-linux-x64.7z) 
+    * descomprimir y ejecutar. <!---->
 
 ## nota: funcionabilidad.
 Para poder gestionar la paleta. (posibilidad de añadir nodos)  
 necesitas instalar npm (nodejs)  
- Windows instala node v8 desde aqui: https://nodejs.org/dist/latest-v8.x/
- ej: https://nodejs.org/dist/latest-v8.x/node-v8.16.0-x86.msi (ultima version para 32bits en el momento en el que escribi el archivo.)  
- Linux preferiblemente instala node desde el gestor de paquetes. (para que las dependencias y librerias del sistema queden bien resueltas)
+- Windows instala node v8 desde aqui: 
+    * https://nodejs.org/dist/latest-v8.x/    
+    ej: https://nodejs.org/dist/latest-v8.x/node-v8.16.0-x86.msi (ultima version para 32bits en el momento en el que escribi el archivo.)  
 
+- Linux preferiblemente instala node desde el gestor de paquetes. 
+(para que las dependencias y librerias del sistema queden bien resueltas)
+   * debian / ubuntu / Mint : `apt-get install nodejs` 
+   * CentOS : `yum install nodejs`   
+   * Fedora : `dsf install nodejs`
+   * FreeBSD : `pkg install nodejs` 
 
+<!-- https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg -->
+ 
 ## Compilacion 
+
 ```bash
+
 # 1) Clonado del repositorio
 git clone https://github.com/EM50L/PortableNodeRed.git
 cd PortableNodeRed
-npm install --unsafe-perm node-red@next
+npm install --unsafe-perm node-red
+
 
 # 2) Fuerzo version de electron rama 2 (viene con nodev8 mejor para poder usar las apis nativas)
 npm install electron@2.0.18
+# Para mas info consulta: https://electronjs.org/docs/development/upgrading-node y https://github.com/electron/node
+
 
 # 3) instalo y resuelvo dependencias.
 npm install
