@@ -96,6 +96,8 @@ epi
  - https://electronjs.org/docs/development/upgrading-node   
  - https://github.com/electron/node  
  - https://nodered.org/docs/faq/node-versions  
+ - https://nodejs.org/en/download/releases/
  - https://serialport.io/docs/guide-platform-support  
+ Normalmente la version de node para no tener que compilar es la 57
 
 ## [pagina personal del autor: jejo.es](https://jejo.es/categories/node-red/)
